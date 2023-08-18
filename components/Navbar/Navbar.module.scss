@@ -1,3 +1,7 @@
+.mobileMenu {
+    display: none;
+}
+
 .navbar {
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
@@ -23,3 +27,27 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .mobileMenu {
+        display: block;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+
+        h2 {
+            display: none;
+        }
+
+        ul {
+            flex-direction: column;
+            margin-top: 20px;
+
+            li {
+                margin-left: 0;
+            }
+        }
+    }
+}
+    
