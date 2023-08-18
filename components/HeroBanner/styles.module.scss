@@ -12,6 +12,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
 
         .left {
             width: 30%;
@@ -34,10 +35,36 @@
 
         img{
             width: 100%;
+            max-width: 500px;
             height: auto;
             border: 1px solid transparent;
             border-radius: 58%;
         }
 
+    }
+}
+
+//mobile view sttyling
+@media (max-width: 768px) {
+    .heroBanner {
+        padding: 25px;
+        .description {
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+                h1 {
+                    font-size: 2rem;
+                    margin-bottom: 25px;
+                    text-align: center;
+                }
+        
+                p {
+                    font-size: 1rem;
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+            }
+        }
     }
 }

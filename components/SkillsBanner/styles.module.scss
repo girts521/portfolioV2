@@ -40,3 +40,27 @@
         transform: translateX(+200%);
     }
 }
+
+@media (max-width: 768px) {
+    .skillsBanner, .skillsBannertwo {
+        animation: none;
+    }
+
+    .skillsBannertwo {
+        display: none;
+    }
+
+    .skillsBanner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .skill {
+            margin-right: 0px;
+            padding: 25px;
+        }
+    }
+}

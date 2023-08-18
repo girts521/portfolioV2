@@ -9,12 +9,12 @@ export default function HeroBanner() {
         <div className={styles.description}>
           <div className={styles.left}>
             <h1>Full-stack Developer</h1>
-            <span>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam provident reprehenderit dolorum minima ad ipsa
               doloremque dolorem blanditiis dolore quis beatae aliquid
               reiciendis natus neque, odio, necessitatibus quae magnam soluta.
-            </span>
+            </p>
           </div>
           <div className={styles.image}>
             <Image src="/images/hero.jpg" alt="hero" width={400} height={500} />
