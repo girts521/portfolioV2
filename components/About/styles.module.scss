@@ -1,0 +1,25 @@
+.aboutContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        border: 1px solid transparent;
+        border-radius: 15px;
+    }
+
+    .aboutDescription {
+        margin-left: 50px;
+        width: 50%;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}

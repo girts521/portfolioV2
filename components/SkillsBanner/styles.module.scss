@@ -1,0 +1,42 @@
+.container:hover {
+    .skillsBanner, .skillsBannertwo {
+        animation-play-state: paused;
+    }
+}
+.skillsBanner, .skillsBannertwo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    animation: slideLeft 20s linear infinite;
+
+    .skill {
+      margin-right: 50px;
+    }
+}
+
+.skillsBannertwo {
+     animation-delay: 5s;
+     transform: translateX(+100%);
+    }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+@keyframes slideLeft {
+    0% {
+        visibility: visible;
+        transform: translateX(+150%);
+    }
+    99.99% {
+        transform: translateX(-200%);
+    }
+    100% {
+        visibility: visible;
+        transform: translateX(+200%);
+    }
+}
