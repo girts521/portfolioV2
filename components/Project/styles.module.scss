@@ -37,3 +37,40 @@
     }
 
 }
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        padding: 25px;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            margin-bottom: 25px;
+        }
+
+        .projectDescription {
+            margin-left: 0;
+            width: 100%;
+
+            h2 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .actions {
+                flex-direction: column;
+                button {
+                    margin-right: 0;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
