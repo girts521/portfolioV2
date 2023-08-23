@@ -30,7 +30,7 @@ export default function HeroBanner() {
                   style={{ height: '600px', width: '550px' }}
                   className={styles.lottie}
               />
-            <Image src="/images/hero.webp" alt="hero" width={400} height={500} />
+            <Image src="/images/hero.webp" alt="hero" width={416} height={500} />
           </div>
         </div>
         <SkillsBanner />
