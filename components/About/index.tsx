@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className={styles.aboutContainer}>
-      <Image src="/images/hero.jpg" alt="hero" width={600} height={400} />
+    <div id="aboutSection" className={styles.aboutContainer}>
+      <Image src="/images/placeholder.webp" alt="hero" width={600} height={400} />
       <div className={styles.aboutDescription}>
         <h1>About Me</h1>
         <p>

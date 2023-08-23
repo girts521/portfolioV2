@@ -1,8 +1,9 @@
 .aboutContainer {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 50px;
+    margin: 100px 0 200px;
 
     img {
         border: 1px solid transparent;
@@ -24,10 +25,10 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .aboutContainer {
         flex-direction: column;
-        padding: 25px;
+        //padding: 25px;
 
         img {
             width: 100%;
@@ -47,7 +48,7 @@
 
             p {
                 text-align: center;
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
         }
     }

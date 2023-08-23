@@ -5,14 +5,21 @@ import HeroBanner from "../../components/HeroBanner";
 import About from "../../components/About";
 import Portfolio from "../../components/Portfolio";
 import Thankyou from "../../components/Thankyou";
+import ScrollFadeInUp from "../../components/ScrollFadeInUp";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+        <ScrollFadeInUp>
       <HeroBanner />
-      <About />
+        </ScrollFadeInUp>
+        <ScrollFadeInUp>
+        <About />
+        </ScrollFadeInUp>
       <Portfolio />
+        <ScrollFadeInUp>
       <Thankyou />
+        </ScrollFadeInUp>
     </main>
   );
 }

@@ -1,11 +1,24 @@
 .mobileMenu {
     display: none;
     position: relative;
-    z-index: 15; 
+    z-index: 15;
+    width: 55px;
+    height: 55px;
+    margin: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .navbar {
-    background-color: #fff;
+    //background-color: #f8fafc;
+    //background-color: #D2E7FF;
+    background-color: rgba(210, 231, 255, 0.5);
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     padding: 0.5rem 1rem;
@@ -17,7 +30,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; 
+    z-index: 100;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+    .navBg {
+        display: none;
+    }
+
+    h2 {
+        font-family: 'Dancing Script', cursive;
+    }
     
 
     ul {
@@ -27,21 +49,51 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        height: 100%;
+        align-items: center;
 
         li {
             margin-left: 1rem;
+            font-family: 'Roboto', sans-serif;
         }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .mobileMenu {
         display: block;
     }
     .navbar {
         flex-direction: column;
         padding: 20px 0;
-        margin-top: 100px;
+        padding-top: 100px;
+        //background-color: rgba(210, 231, 255, 0.99);
+        height: 100vh;
+        background: transparent;
+        overflow: hidden;
+
+        .navBg {
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url("/background.webp") no-repeat;
+            background-size: cover;
+            border-radius: 100%;
+            transform: translateX(-20%) translateY(-20%);
+        }
+
+        &.open {
+            .navBg {
+                animation: fillBackground 0.5s forwards;
+            }
+            .navItem {
+                animation: slideUpAndAppear 0.3s forwards 0.3s; /* 0.5s delay to start after background animation */
+
+            }
+        }
 
         h2 {
             display: none;
@@ -51,10 +103,32 @@
             flex-direction: column;
             margin-top: 20px;
 
-            li {
+            .navItem {
+                opacity: 0;
+                transform: translateY(10px);
+                transition: opacity 0.3s ease-in-out 0.5s, transform 0.3s ease-in-out 0.5s;
                 margin-left: 0;
+                margin-bottom: 50px;
+                font-size: 2rem;
             }
+
+            li {}
         }
     }
 }
-    
+
+@keyframes slideUpAndAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fillBackground {
+    to {
+        transform: translateX(0) translateY(0);
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

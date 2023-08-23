@@ -1,5 +1,5 @@
 .heroBanner {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,7 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        margin: 100px 0 100px;
 
         .left {
             width: 30%;
@@ -21,7 +22,7 @@
                 margin-bottom: 25px;
             }
     
-            span {
+            p {
                 font-size: 1.5rem;
     
             }
@@ -30,8 +31,31 @@
 
     .image {
         height: 500px;
-        overflow: hidden;
+        position: relative;
+        display: inline-block;
 
+        //&:before, &:after {
+        //    content: "";
+        //    position: absolute;
+        //    top: 0;
+        //    bottom: 0;
+        //    width: 50%; /* control the width of the fade effect */
+        //    background: linear-gradient(to right, rgba(250, 250, 250, 0), rgba(250, 250, 250, 1) 50%, rgba(250, 250, 250, 0));
+        //    pointer-events: none; /* so it doesn't block interactions with the image */
+        //}
+        //
+        //&:after {
+        //    right: 0;
+        //    transform: scaleX(-1); /* flip the gradient for the right side */
+        //}
+
+        .lottie {
+            position: absolute;
+            top: -88px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 15;
+        }
 
         img{
             width: 100%;
@@ -39,13 +63,19 @@
             height: auto;
             border: 1px solid transparent;
             border-radius: 58%;
+            -webkit-mask-image: radial-gradient(circle at center, white 65%, transparent 70%);
+            mask-image: radial-gradient(circle at center, white 40%, transparent 100%);
         }
 
+    }
+
+    .lottieWave {
+        z-index: 10;
     }
 }
 
 //mobile view sttyling
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .heroBanner {
         padding: 25px;
         .description {
@@ -53,18 +83,35 @@
 
             .left {
                 width: 100%;
+
                 h1 {
-                    font-size: 2rem;
+                    font-size: 2.5rem;
                     margin-bottom: 25px;
                     text-align: center;
                 }
         
                 p {
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     text-align: center;
-                    margin-bottom: 50px;
+                    margin-bottom: 100px;
                 }
             }
         }
+
+        .lottieWave {
+            display: none;
+        }
     }
 }
+
+@media (max-width: 500px) {
+    .heroBanner {
+        .image {
+            .lottie {
+                display: none;
+            }
+        }
+
+    }
+}
+

@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 
@@ -9,7 +11,13 @@ interface ProjectProps {
     url?: string;
   }
 
-export default function Project({ title, description, codeUrl, img = "/images/placeholder.jpg", url }: ProjectProps) {
+export default function Project({ title, description, codeUrl, img = "/images/placeholder.webp", url }: ProjectProps) {
+const [isOpen, setIsOpen] = useState(false);
+    const onClickHandler = (e:any ) => {
+        console.log(e.target.parentNode);
+        setIsOpen(!isOpen);
+        e.target.parentNode.children[1].classList.toggle(styles.truncate);
+    }
   return (
     <>
       <div className={styles.project}>
@@ -21,9 +29,10 @@ export default function Project({ title, description, codeUrl, img = "/images/pl
         />
         <div className={styles.projectDescription}>
           <h2>{title}</h2>
-          <p>
+          <p className={styles.truncate} >
             {description}
           </p>
+            <span onClick={onClickHandler}>{isOpen ? "Show less" : "Read more" }</span>
           <div className={styles.actions}>
             <button><a href={url}>View Project</a></button>
             <button><a href={codeUrl}>View Code</a></button>

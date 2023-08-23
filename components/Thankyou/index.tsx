@@ -1,8 +1,11 @@
+"use client";
 import styles from "./styles.module.scss";
+import Lottie from "react-lottie-player";
+import WaveAnimationData from "../../public/wave6.json";
 
 export default function Thankyou() {
   return (
-    <div className={styles.thankyou}>
+    <div id="contactSection" className={styles.thankyou}>
       <h2>Thank you for visiting!</h2>
       <p>
         Thank you for taking the time and visit my portfolio page. I hope you
@@ -19,6 +22,13 @@ export default function Thankyou() {
           https://www.linkedin.com/in/girts-karcevskis-79302890/
         </a>
       </p>
+        <Lottie
+            play
+            loop
+            animationData={WaveAnimationData}
+            style={{ height: '600px', width: '100%' }}
+            className={styles.lottieWave}
+        />
     </div>
   );
 }
