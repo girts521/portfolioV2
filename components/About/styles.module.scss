@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 0 50px;
     margin: 100px 0 200px;
 
@@ -14,42 +15,16 @@
         margin-left: 50px;
         width: 50%;
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 25px;
-        }
 
         p {
-            font-size: 1.5rem;
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .aboutContainer {
-        flex-direction: column;
-        //padding: 25px;
-
-        img {
-            width: 100%;
-            height: auto;
-            max-height: 500px;
-            margin-bottom: 25px;
-        }
-
-        .aboutDescription {
-            margin-left: 0;
-            width: 100%;
-
-            h1 {
-                font-size: 2rem;
-                text-align: center;
-            }
-
-            p {
-                text-align: center;
-                font-size: 1.5rem;
-            }
+            color: #CBA3FF;
+            font-family: Lato;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 17px;
+            /* 141.667% */
+            letter-spacing: 0.48px;
         }
     }
 }

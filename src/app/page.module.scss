@@ -1,5 +1,7 @@
 //@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@600&family=Dancing+Script:wght@700&display=swap');
 
+  @import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+
 @font-face {
     font-family: 'Dancing Script';
     src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
@@ -13,19 +15,20 @@
     height: 100%;
     //background-color: #FAFAFA;
     //background: linear-gradient(to bottom right, #F5F7FA, #E1E5EB);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding-top: 100px;
-    background-image: url("/background.webp");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
+    // padding-top: 100px;
+    // background-image: url("/background.webp");
     overflow: hidden;
+    background-color: #150416;
 
-    h1,
-    h2 {
-        color: #1E2A38;
-        font-family: 'Roboto Slab', serif;
-    }
+    // h1,
+    // h2 {
+    //     color: #1E2A38;
+    //     font-family: 'Roboto Slab', serif;
+    // }
 
     button {
         background-color: #2E77D0;
