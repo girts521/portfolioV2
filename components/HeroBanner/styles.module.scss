@@ -38,3 +38,18 @@
         padding: 25px;
     }
 }
+
+@media (min-width: 768px ) and (max-width: 1024px) {
+    .heroBanner {
+        padding-left: 30px;
+        padding-right: 30px;
+
+       h1 {
+        font-size: 70px;
+       }
+
+       h2 {
+        font-size: 30px;
+       }
+    }
+}

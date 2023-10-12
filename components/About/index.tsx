@@ -8,7 +8,7 @@ export default function About() {
 
       <div className={styles.aboutDescription}>
       <Image
-        src="/Photo.png"
+        src="/Photo2.png"
         alt="hero"
         width={220}
         height={370}

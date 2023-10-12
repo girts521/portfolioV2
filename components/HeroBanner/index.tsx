@@ -12,7 +12,7 @@ import SkillsBanner from "../SkillsBanner";
 export default function HeroBanner() {
     return (
       <div id="homeSection" className={styles.heroBanner}>
-            <h1>Full-stack Developer</h1>
+            <h1>Full-stack Web Developer</h1>
             <h2>
             Magento 2 and React Developer Actively Enhancing the E-commerce Landscape
             </h2>

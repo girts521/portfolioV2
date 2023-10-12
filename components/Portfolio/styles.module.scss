@@ -1,11 +1,19 @@
 .portfolioContainer {
     min-height: 100vh;
-    padding: 0 50px;
+    padding: 0 20px;
 
     h2 {
+        color: #CBA3FF;
+        /* Heading */
+        font-family: Handjet;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 10.78px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
         text-align: center;
-        font-size: 3rem;
-        margin-bottom: 10%;
     }
 
     .projects {
@@ -16,4 +24,14 @@
     }
 
 
+}
+
+@media (min-width: 768px) {
+    .portfolioContainer {
+        padding: 0 30px;
+        h2 {
+            font-size: 70px;
+            text-align: left;
+        }
+    }
 }

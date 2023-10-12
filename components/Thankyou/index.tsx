@@ -13,22 +13,17 @@ export default function Thankyou() {
         looking for a job as a Web Developer. If you are interested in working
         with me, please contact me via email or LinkedIn.
       </p>
-      <p>
+      <p className={styles.contact}>
         My email address is:{" "}
         <a href="mailto:girts@gkarcevskis.com" target="_blank">girts@gkarcevskis.com</a>
         <br />
-        Check out my LinkedIn profile:{" "}
+        Also
+        <br />
+        Check out my {" "}
         <a href="https://www.linkedin.com/in/girts-karcevskis-79302890/" target="_blank">
-          https://www.linkedin.com/in/girts-karcevskis-79302890/
+        LinkedIn profile
         </a>
       </p>
-        <Lottie
-            play
-            loop
-            animationData={WaveAnimationData}
-            style={{ height: '600px', width: '100%' }}
-            className={styles.lottieWave}
-        />
     </div>
   );
 }

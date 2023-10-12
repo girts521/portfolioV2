@@ -7,23 +7,33 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     h2 {
-        font-size: 4rem;
-        font-weight: 700;
-        margin-bottom: 4rem;
-        font-family: 'Dancing Script', cursive !important;
+        color: #CBA3FF;
         text-align: center;
-        padding: 0 50px;
+        /* Heading */
+        font-family: Handjet;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 10.78px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
     }
 
     p {
-        font-size: 1.2rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-        width: 80%;
+        color: #CBA3FF;
         text-align: center;
-        line-height: 2rem;
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 35px;
+        /* 265.217% */
+        letter-spacing: 1.84px;
 
         a {
             color: #000;
@@ -31,8 +41,46 @@
         }
     }
 
-    .lottieWave {
-        position: absolute;
-        bottom: -200px;
+    .contact {
+        margin-top: 20px;
+        color: #CBA3FF;
+        text-align: center;
+        font-family: Handjet;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 50px;
+        /* 383.333% */
+        letter-spacing: 5.7px;
+        text-transform: uppercase;
+
+        a {
+            color: #CBA3FF;
+            font-family: Handjet;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 40px;
+            letter-spacing: 5.7px;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .thankyou {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        h2 {
+            font-size: 70px;
+        }
+        p {
+            font-size: 25px;
+        }
+        .contact {
+            font-size: 30px;
+        }
     }
 }

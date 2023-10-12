@@ -28,7 +28,7 @@ const [isOpen, setIsOpen] = useState(false);
           height={400}
         />
         <div className={styles.projectDescription}>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <p className={styles.truncate} >
             {description}
           </p>

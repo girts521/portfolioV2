@@ -40,7 +40,7 @@
     h2 {
         font-family: 'Dancing Script', cursive;
     }
-    
+
 
     ul {
         display: flex;
@@ -64,6 +64,7 @@
     .mobileMenu {
         display: block;
     }
+
     .navbar {
         flex-direction: column;
         padding: 20px 0;
@@ -80,8 +81,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: url("/background.webp") no-repeat;
-            background-size: cover;
+            // background: url("/background.webp") no-repeat;
+            // background-size: cover;
+            background-color: #150416;
             border-radius: 100%;
             transform: translateX(-20%) translateY(-20%);
         }
@@ -90,8 +92,10 @@
             .navBg {
                 animation: fillBackground 0.5s forwards;
             }
+
             .navItem {
-                animation: slideUpAndAppear 0.3s forwards 0.3s; /* 0.5s delay to start after background animation */
+                animation: slideUpAndAppear 0.3s forwards 0.3s;
+                /* 0.5s delay to start after background animation */
 
             }
         }
@@ -111,10 +115,22 @@
                 margin-left: 0;
                 margin-bottom: 50px;
                 font-size: 2rem;
+                color: #CBA3FF;
+                font-family: Handjet;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 10.78px;
             }
 
             li {}
         }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navItem {
+        font-size: 40px !important;
     }
 }
 
