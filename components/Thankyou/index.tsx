@@ -9,8 +9,7 @@ export default function Thankyou() {
       <h2>Thank you for visiting!</h2>
       <p>
         Thank you for taking the time and visit my portfolio page. I hope you
-        enjoyed it and I am looking forward to hearing from you! I am currently
-        looking for a job as a Web Developer. If you are interested in working
+        enjoyed it and I am looking forward to hearing from you! If you are interested in working
         with me, please contact me via email or LinkedIn.
       </p>
       <p className={styles.contact}>

@@ -35,3 +35,25 @@
         }
     }
 }
+
+@media (min-width: 1024px) {
+    .portfolioContainer {
+        padding: 0 80px;
+
+        .projects {
+
+        }
+
+
+    }
+}
+
+@media (min-width: 1440px) {
+    .portfolioContainer {
+        padding: 0 120px;
+
+        h2 {
+            font-size: 80px;
+        }
+    }
+}

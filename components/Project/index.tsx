@@ -9,9 +9,10 @@ interface ProjectProps {
     codeUrl: string;
     img?: string;
     url?: string;
+    reverse?: boolean;
   }
 
-export default function Project({ title, description, codeUrl, img = "/images/placeholder.webp", url }: ProjectProps) {
+export default function Project({ title, description, codeUrl, img = "/ProjectImage.png", url, reverse }: ProjectProps) {
 const [isOpen, setIsOpen] = useState(false);
     const onClickHandler = (e:any ) => {
         console.log(e.target.parentNode);
@@ -20,7 +21,7 @@ const [isOpen, setIsOpen] = useState(false);
     }
   return (
     <>
-      <div className={styles.project}>
+      <div className={`${styles.project} ${reverse ? styles.reverse : ''}`}>
         <Image
           src={img}
           alt={title}
@@ -42,3 +43,4 @@ const [isOpen, setIsOpen] = useState(false);
     </>
   );
 }
+// "/images/placeholder.webp"

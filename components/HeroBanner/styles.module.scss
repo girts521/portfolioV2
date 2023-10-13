@@ -1,5 +1,5 @@
 .heroBanner {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,6 +7,10 @@
     align-items: center;
     background-image: url("/laptop_M.webp");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 81px;
+
     // min-width: 100vh;
 
     h1 {
@@ -39,17 +43,54 @@
     }
 }
 
-@media (min-width: 768px ) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .heroBanner {
         padding-left: 30px;
         padding-right: 30px;
 
-       h1 {
-        font-size: 70px;
-       }
+        h1 {
+            font-size: 70px;
+        }
 
-       h2 {
-        font-size: 30px;
-       }
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .heroBanner {
+        align-items: self-start;
+
+        h1 {
+            font-size: 77px;
+            margin-left: 50px;
+            width: 571px;
+        }
+
+        h2 {
+            font-size: 34px;
+            margin-left: 50px;
+            width: 646px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .heroBanner {
+        background-image: url("/laptop.webp");
+        align-items: self-start;
+
+
+        h1 {
+            font-size: 85px;
+            width: 700px;
+            margin-left: 120px;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin-left: 120px;
+        }
     }
 }

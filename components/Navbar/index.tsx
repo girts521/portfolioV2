@@ -16,7 +16,7 @@ export default function Navbar() {
         handleResize();
         window.addEventListener("resize", handleResize);
 
-        if (width > 1024) {
+        if (width >= 1024) {
             setIsOpen(true);
         }
         if (width < 1024) {
@@ -49,7 +49,7 @@ export default function Navbar() {
                     onClickHandler();
                 }}
             >
-                <Image src="/burger.svg" alt="logo" width="100" height="100"/>
+                <Image src="/Burger.png" alt="logo" width="100" height="100"/>
             </div>
 
             {isOpen && (

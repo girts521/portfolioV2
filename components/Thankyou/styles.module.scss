@@ -84,3 +84,27 @@
         }
     }
 }
+
+@media (min-width: 1024px) {
+    .thankyou {
+        padding-left: 80px;
+        padding-right: 80px;
+
+        h2 {
+            font-size: 77px;
+        }
+        p {
+            font-size: 30px;
+        }
+        .contact {
+            font-size: 35px;
+        }
+    }
+}
+
+@media (min-width:1440px) {
+.thankyou {
+    max-width: 1500px;
+    margin: auto;
+}
+}

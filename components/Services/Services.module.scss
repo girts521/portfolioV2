@@ -1,0 +1,157 @@
+.container {
+    margin: 100px 20px;
+    max-width: 1440px;
+    h1 {
+        color: #CBA3FF;
+        text-align: center;
+        font-family: Handjet;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 4.32px;
+    }
+
+    .servicesContainer {
+        .service {
+            h2 {
+                text-align: center;
+                margin-top: 42px;
+                color: #CBA3FF;
+                font-family: Handjet;
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.7px;
+            }
+
+            .description {
+                p {
+                    margin-top: 15px;
+                    color: #CBA3FF;
+                    font-family: Lato;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                ul {
+                    margin-top: 15px;
+                    li {
+                        margin-top: 5px;
+                        color: #CBA3FF;
+                        font-family: Lato;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        list-style-type: none;                    }
+                }
+            }
+        }
+    }
+
+    .text {
+        margin-top: 52px;
+        color: #CBA3FF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: 100px 50px;
+        h1 {
+            font-size: 70px;
+        }
+
+        .servicesContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 100px;
+
+            .service {
+                width: 30%;
+                h2 {
+                    font-size: 40px;
+                }
+
+                .description {
+                    p {
+                        font-size: 25px;
+                    }
+
+                    ul {
+                        li {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .text {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        margin: 100px 100px;
+        h1 {
+            font-size: 70px;
+        }
+
+        .servicesContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 100px;
+
+            .service {
+                width: 30%;
+                h2 {
+                    font-size: 50px;
+                }
+
+                .description {
+                    p {
+                        font-size: 25px;
+                    }
+
+                    ul {
+                        li {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .text {
+            font-size: 35px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin: 100px auto;
+        padding: 0 20px;
+        
+        .text {
+            
+        }
+    }
+}

@@ -153,3 +153,61 @@
         }
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .project {
+        flex-direction: row;
+        // height: 1024px;
+        padding: 0;
+        margin-top: 50px;
+
+        img {
+            width: 50%;
+            height: auto;
+            max-height: 500px;
+            margin: 0;
+            margin-right: 15px;
+        }
+
+        .projectDescription{ 
+            width: 50%;
+            margin-right: 15px;
+        }
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+      }
+      
+}
+
+@media (min-width: 1440px) {
+    .project {
+        .projectDescription {
+            h3 {
+                font-size: 70px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+
+            .actions {
+                button {
+                    font-size: 25px;
+                    width: 300px;
+                }
+            }
+        }
+
+        img {
+            height: 1024px;
+            max-height: 1024px;
+            width: auto;
+        }
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+      }
+}

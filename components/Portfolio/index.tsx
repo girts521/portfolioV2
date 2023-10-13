@@ -20,6 +20,7 @@ export default function Portfolio() {
           {inView ? (
             <ScrollFadeInUp>
               <Project
+              reverse
                 title="Project 1"
                 codeUrl="/"
                 description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore voluptatibus eligendi rerum qui repellat numquam, commodi pariatur? Illum ea blanditiis deserunt fuga facilis unde numquam aspernatur accusamus accusantium! Saepe, ad.
@@ -52,6 +53,7 @@ Beatae velit quaerat culpa iusto sapiente ut eligendi odio enim earum quam! Expl
           {inView ? (
             <ScrollFadeInUp>
               <Project
+              reverse
                 title="Project 1"
                 codeUrl="/"
                 description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore voluptatibus eligendi rerum qui repellat numquam, commodi pariatur? Illum ea blanditiis deserunt fuga facilis unde numquam aspernatur accusamus accusantium! Saepe, ad.
@@ -84,6 +86,7 @@ Beatae velit quaerat culpa iusto sapiente ut eligendi odio enim earum quam! Expl
           {inView ? (
             <ScrollFadeInUp>
               <Project
+              reverse
                 title="Project 1"
                 codeUrl="/"
                 description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore voluptatibus eligendi rerum qui repellat numquam, commodi pariatur? Illum ea blanditiis deserunt fuga facilis unde numquam aspernatur accusamus accusantium! Saepe, ad.

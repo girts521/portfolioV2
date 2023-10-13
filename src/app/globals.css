@@ -41,12 +41,13 @@
 }
 
 body {
-  background-image: url("/background.webp");
+  /* background-image: url("/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  max-width: 2000px;
+  background-attachment: fixed; */
+  background: #150416;
+  max-width: 3000px;
   margin: 0 auto;
 }
 
