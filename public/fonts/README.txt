@@ -1,21 +1,28 @@
-Dancing Script Variable Font
-============================
+Handjet Variable Font
+=====================
 
-This download contains Dancing Script as both a variable font and static fonts.
+This download contains Handjet as both a variable font and static fonts.
 
-Dancing Script is a variable font with this axis:
+Handjet is a variable font with these axes:
+  ELGR
+  ELSH
   wght
 
 This means all the styles are contained in a single file:
-  DancingScript-VariableFont_wght.ttf
+  Handjet/Handjet-VariableFont_ELGR,ELSH,wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Dancing Script:
-  static/DancingScript-Regular.ttf
-  static/DancingScript-Medium.ttf
-  static/DancingScript-SemiBold.ttf
-  static/DancingScript-Bold.ttf
+in those cases you can use the static font files for Handjet:
+  Handjet/static/Handjet-Thin.ttf
+  Handjet/static/Handjet-ExtraLight.ttf
+  Handjet/static/Handjet-Light.ttf
+  Handjet/static/Handjet-Regular.ttf
+  Handjet/static/Handjet-Medium.ttf
+  Handjet/static/Handjet-SemiBold.ttf
+  Handjet/static/Handjet-Bold.ttf
+  Handjet/static/Handjet-ExtraBold.ttf
+  Handjet/static/Handjet-Black.ttf
 
 Get started
 -----------

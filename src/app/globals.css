@@ -116,3 +116,32 @@ a {
     color-scheme: dark;
   }
 }
+
+/* For Lato Regular */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+/* For Lato Bold */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Handjet';
+  font-weight: 400;
+  src: url('/fonts/static/Handjet-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Handjet';
+  font-weight: 500;
+  src: url('/fonts/static/Handjet-Medium.ttf') format('truetype');
+}
+
