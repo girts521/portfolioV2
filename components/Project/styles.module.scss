@@ -81,6 +81,10 @@
         /* number of lines you want to display */
         -webkit-box-orient: vertical;
         overflow: hidden;
+
+        @media (min-width: 1024px) {
+            display: block;
+        }
     }
 
 }
@@ -179,6 +183,9 @@
         flex-direction: row-reverse;
       }
       
+      .readMore {
+        display: none !important;
+      }
 }
 
 @media (min-width: 1440px) {
@@ -209,5 +216,9 @@
 
     .reverse {
         flex-direction: row-reverse;
+      }
+
+      .readMore {
+        display: none !important;
       }
 }

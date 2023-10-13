@@ -33,7 +33,7 @@ const [isOpen, setIsOpen] = useState(false);
           <p className={styles.truncate} >
             {description}
           </p>
-            <span onClick={onClickHandler}>{isOpen ? "Show less" : "Read more" }</span>
+            <span className={styles.readMore} onClick={onClickHandler}>{isOpen ? "Show less" : "Read more" }</span>
           <div className={styles.actions}>
             <button><a href={url}>View Project</a></button>
             <button><a href={codeUrl}>View Code</a></button>
