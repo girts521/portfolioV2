@@ -10,8 +10,9 @@ export default function About() {
       <Image
         src="/Photo2.png"
         alt="hero"
-        width={220}
-        height={370}
+        width={1000}
+        height={1200}
+        quality={100}
       />
         <p>
           I'm originally from Latvia, a charming little country in Eastern
