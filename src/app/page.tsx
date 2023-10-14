@@ -8,6 +8,8 @@ import Portfolio from "../../components/Portfolio";
 import Thankyou from "../../components/Thankyou";
 import ScrollFadeInUp from "../../components/ScrollFadeInUp";
 
+// import CookieConsentBanner from "../../components/CookieConsentBanner";
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -24,6 +26,8 @@ export default function Home() {
         <ScrollFadeInUp>
       <Thankyou />
         </ScrollFadeInUp>
+
+        {/* <CookieConsentBanner /> */}
     </main>
   );
 }

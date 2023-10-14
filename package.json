@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@types/js-cookie": "^3.0.4",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "@vercel/analytics": "^1.0.2",
+    "js-cookie": "^3.0.5",
     "lottie-web": "^5.12.2",
     "next": "13.4.8",
     "react": "18.2.0",
