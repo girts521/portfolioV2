@@ -13,44 +13,7 @@
     }
 
     .servicesContainer {
-        .service {
-            h2 {
-                text-align: center;
-                margin-top: 42px;
-                color: #CBA3FF;
-                font-family: Handjet;
-                font-size: 35px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                letter-spacing: 0.7px;
-            }
-
-            .description {
-                p {
-                    margin-top: 15px;
-                    color: #CBA3FF;
-                    font-family: Lato;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-
-                ul {
-                    margin-top: 15px;
-                    li {
-                        margin-top: 5px;
-                        color: #CBA3FF;
-                        font-family: Lato;
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                        list-style-type: none;                    }
-                }
-            }
-        }
+        position: relative;
     }
 
     .text {
@@ -78,25 +41,6 @@
             justify-content: space-between;
             flex-wrap: wrap;
             margin-top: 100px;
-
-            .service {
-                width: 30%;
-                h2 {
-                    font-size: 40px;
-                }
-
-                .description {
-                    p {
-                        font-size: 25px;
-                    }
-
-                    ul {
-                        li {
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
         }
 
         .text {
@@ -118,25 +62,6 @@
             justify-content: space-between;
             flex-wrap: wrap;
             margin-top: 100px;
-
-            .service {
-                width: 30%;
-                h2 {
-                    font-size: 50px;
-                }
-
-                .description {
-                    p {
-                        font-size: 25px;
-                    }
-
-                    ul {
-                        li {
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
         }
 
         .text {
