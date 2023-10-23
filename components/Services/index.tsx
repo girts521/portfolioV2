@@ -12,7 +12,6 @@ export default function Services() {
           list={[
             "Blog",
             "User login",
-            "Payment integration",
             "E-commerce",
             "And more",
           ]}
