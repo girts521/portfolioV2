@@ -1,14 +1,29 @@
+"use client"
+
 import styles from "./Services.module.scss";
 import Service from "../Service";
+import { useState } from "react";
+import ReactDOM from 'react-dom';
+
+import ContactForm from "../ContactForm";
 
 export default function Services() {
+const [showContact, setShowContact] = useState(false)
+
+const closeContact = () => {
+  setShowContact(false)
+  document.body.style.overflow = "auto"
+  document.body.style.height = "auto"
+}
+  
+
   return (
     <div className={styles.container}>
       <h1>Services</h1>
       <div className={styles.servicesContainer}>
         <Service
           title="Custom full web application"
-          description="I will develop a fully functional web application which will include all the functionality needed for your use case"
+          description="I'll build a fully-functional web app, customized to meet all your specific needs."
           list={[
             "Blog",
             "User login",
@@ -31,25 +46,26 @@ export default function Services() {
 
         <Service
           title="Existing website update"
-          description="If your website needs a new modern look, I will help to design and update it. Also, I can test and fix any functionality or add some new functionality which is currently missing."
+          description="Need a modern refresh for your website?  I'll redesign, update, and even fix or add functionalities you're missing."
           image="/update.png"
         />
 
         <Service
           title="Magento e-commerce"
-          description="I have experience working with various Magento 2 e-commerce websites. I can develop new or fix an existing magento 2 website"
+          description="Experienced with Magento 2 e-commerce platforms, I can either develop a new site or troubleshoot and fix your existing one."
           image="ecommerce.png"
         />
 
         <Service
           title="Facebook ads management"
-          description="Confused with ads manager, business manager, pixel, audiences... and just want to launch ads? I have seen banhammers and successful accounts. I am familiar with all the ad rules and best practices. I am here to help!"
+          description="Confused by Ads Manager, Business Manager, pixels, and audiences, but just want to get your ads live? 
+          From banhammers to success stories, I know the ad rules and best practices inside out. I'm here to help!"
           image="/f_ads.png"
         />
 
         <Service
           title="Facebook pixel management"
-          description="I can also help setting up pixel on the website and manage all the events. Or troubleshoot a current setup. I know all the best practices and can identify potential issues."
+          description="Need help with pixel setup and event management on your website? Whether you're starting from scratch or troubleshooting an existing setup, I've got you covered. I'm well-versed in best practices and can spot potential issues."
           image="/pixel.png"
         />
       </div>
@@ -59,11 +75,22 @@ export default function Services() {
         modern design with top-tier performance and speed. <br /> <br />
         Interested in a service?
         <br />
-        Reach out!
+        <button onClick={() => {
+          if(showContact) {
+            setShowContact(false)
+            document.body.style.overflow = "auto"
+            document.body.style.height = "auto"
+          } else {
+            setShowContact(true)
+            document.body.style.overflow = "hidden"
+            document.body.style.height = "100vh"
+          }
+        }} className={styles.contactBtn}>Reach out!</button>
         <br />
         <br />
         All projects are individually assessed before pricing.
       </p>
+      {showContact &&  ReactDOM.createPortal(<ContactForm closeContact={closeContact}  />, document.body)}
     </div>
   );
 }
