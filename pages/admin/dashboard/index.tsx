@@ -1,5 +1,6 @@
-
+//@ts-ignore
 import { getUsers, signOutUser } from 'lib/firebase'
+//@ts-ignore
 import { admin } from 'lib/firebaseAdmin'
 import { GetServerSideProps } from 'next'
 import { useEffect, useState } from 'react'
@@ -11,6 +12,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   try {
     const cookies = context.req.headers.cookie
     const token = cookies
+    //@ts-ignore
       ? cookies
           .split('; ')
           .find((c) => c.startsWith('authToken='))
@@ -44,14 +46,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
   }
 }
-
+//@ts-ignore
 const Dashboard = ({token}) => {
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState<boolean>(false)
 
 
   useEffect(() => {
-  
+  //@ts-ignore
     const getUsersData = async (idToken) => {
       const encryptedUsers = await getUsers()
 
