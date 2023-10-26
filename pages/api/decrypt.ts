@@ -1,9 +1,20 @@
 import admin from "firebase-admin";
 import crypto from "crypto";
 
-const keyBuffer = Buffer.from(process.env.ENCRYPTION_KEY, "hex");
+const keyBuffer = Buffer.from(process.env.ENCRYPTION_KEY as string, "hex");
+function decrypt(encryptedData: any, iv: any, authTag: any, keyBuffer: any) {
+  const decipher = crypto.createDecipheriv(
+    "aes-256-gcm",
+    keyBuffer,
+    Buffer.from(iv, "hex")
+  );
+  decipher.setAuthTag(Buffer.from(authTag, "hex"));
+  let decrypted = decipher.update(encryptedData, "hex", "utf8");
+  decrypted += decipher.final("utf8");
+  return decrypted;
+}
 
-export default async (req, res) => {
+export default async (req: any, res: any) => {
   if (req.method === "POST") {
     // Verify the user token using Firebase Admin
     const token = req.headers.authorization?.replace("Bearer ", "");
@@ -14,21 +25,11 @@ export default async (req, res) => {
       const decodedToken = await admin.auth().verifyIdToken(token);
       if (decodedToken.uid === process.env.ADMIN_UID) {
         // Fetch encrypted users
-        function decrypt(encryptedData, iv, authTag, keyBuffer) {
-          const decipher = crypto.createDecipheriv(
-            "aes-256-gcm",
-            keyBuffer,
-            Buffer.from(iv, "hex")
-          );
-          decipher.setAuthTag(Buffer.from(authTag, "hex"));
-          let decrypted = decipher.update(encryptedData, "hex", "utf8");
-          decrypted += decipher.final("utf8");
-          return decrypted;
-        }
+
 
         if (type === "users") {
           try {
-            const decryptedUsers = encryptedUsers.map((user) => {
+            const decryptedUsers = encryptedUsers.map((user: any) => {
               console.log("user: ", user);
 
               return {
