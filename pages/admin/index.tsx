@@ -3,17 +3,17 @@ import React, { ChangeEvent, useState } from 'react'
 import { useRouter } from 'next/router'
 import { signIn } from 'lib/firebase'
 import axios from 'axios'
-import { GetServerSideProps } from 'next'
+// import { GetServerSideProps } from 'next'
 import { admin } from 'lib/firebaseAdmin'
 import styles from './index.module.scss'
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: any = async (context: any) => {
   try {
     const cookies = context.req.headers.cookie
     const token = cookies
       ? cookies
           .split('; ')
-          .find((c) => c.startsWith('authToken='))
+          .find((c: any) => c.startsWith('authToken='))
           .split('=')[1]
       : null
 
@@ -55,7 +55,7 @@ export default function Admin() {
 
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
-  const [errorMsg, setError] = useState<string>(null)
+  const [errorMsg, setError] = useState<string>('')
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement>,
@@ -64,7 +64,7 @@ export default function Admin() {
     setter(e.target.value)
   }
 
-  const handleSignIn = async (email, password) => {
+  const handleSignIn = async (email: any, password: any) => {
     const result = await signIn(email, password)
     if (result.user && result.error === null) {
       const token = await result.user.getIdToken()
@@ -82,7 +82,7 @@ export default function Admin() {
         if (response.status === 200) {
           router.push('/admin/dashboard') // Navigate to the dashboard
         }
-      } catch (error) {
+      } catch (error: any) {
         if (error.response.status === 401) {
           setError('You are not authorized to access this page')
         } else {
@@ -96,7 +96,7 @@ export default function Admin() {
     }
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault()
     const result = await handleSignIn(email, password)
   }
