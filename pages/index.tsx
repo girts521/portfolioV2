@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./page.module.scss";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     const { section } = router.query;
     if (section) {
-      scroller.scrollTo(section, {
+      scroller.scrollTo(section as string, {
         duration: 900,
         delay: 0,
         smooth: 'easeInOutQuart',
