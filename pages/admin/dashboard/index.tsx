@@ -1,6 +1,5 @@
 
 import { getUsers, signOutUser } from 'lib/firebase'
-//@ts-ignore
 import { admin } from 'lib/firebaseAdmin'
 import { GetServerSideProps } from 'next'
 import { useEffect, useState } from 'react'
@@ -11,16 +10,24 @@ import styles from './index.module.scss'
 export const getServerSideProps: GetServerSideProps = async (context) => {
   try {
     const cookies = context.req.headers.cookie
-    const token = cookies
-    //@ts-ignore
-      ? cookies
-          .split('; ')
-          .find((c) => c.startsWith('authToken='))
-          .split('=')[1]
-      : null
-    console.log('headers: ', context.req.headers)
-    console.log('token in dashboard:', token)
-    console.log('cookies: ', cookies)
+    let token = ''
+    if (cookies) {
+      const authTokenCookie = cookies.split('; ').find((c) => c.startsWith('authToken='))
+      if (authTokenCookie) {
+        token = authTokenCookie.split('=')[1]
+      }
+    }
+
+    // const token = cookies
+    //   ? cookies
+    //       .split('; ')
+    //       .find((c) => c.startsWith('authToken='))
+    //       .split('=')[1]
+    //   : null
+    // console.log('headers: ', context.req.headers)
+    // console.log('token in dashboard:', token)
+    // console.log('cookies: ', cookies)
+
     const decodedToken = await admin.auth().verifyIdToken(token)
 
     if (
