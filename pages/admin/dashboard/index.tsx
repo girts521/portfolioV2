@@ -1,4 +1,4 @@
-//@ts-ignore
+
 import { getUsers, signOutUser } from 'lib/firebase'
 //@ts-ignore
 import { admin } from 'lib/firebaseAdmin'
