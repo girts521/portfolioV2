@@ -1,6 +1,6 @@
 import {admin} from 'lib/firebaseAdmin'
 
-export default async (req, res) => {
+export default async (req: any, res: any) => {
   const token = req.headers.authorization
 
   try {
