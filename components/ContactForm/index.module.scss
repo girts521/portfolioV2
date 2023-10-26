@@ -3,7 +3,7 @@
     top: 0;
     height: 100vh;
     width: 100vw;
-    background: #150416;
+    background: #150416cc;
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -108,13 +108,29 @@
                 font-weight: 400;
                 line-height: normal;
                 letter-spacing: 0.5px;
+                cursor: pointer;
             }
 
             input {
                 width: 20px;
                 height: 20px;
                 margin-right: 20px;
+                cursor: pointer;
             }
+        }
+
+        .error {
+            font-size: 20px;
+            color: red;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .success {
+            font-size: 20px;
+            color: #CBA3FF;
+            margin-top: 15px;
+            text-align: center;
         }
 
         .innerSubmit {
@@ -145,16 +161,17 @@
 @media (min-width: 768px) {
     .container {
         .close {
-      
+
             top: 25px;
             left: 25px;
-         
+
 
             img {
                 height: 35px;
                 width: 35px;
             }
         }
+
         .formContainer {
             width: 90%;
 
@@ -204,6 +221,14 @@
                 }
             }
 
+            .error {
+                font-size: 25px;
+            }
+
+            .success {
+                font-size: 25px;
+            }
+
             .innerSubmit {
                 font-size: 30px;
                 padding: 15px 55px;
@@ -214,46 +239,56 @@
 }
 
 @media (min-width: 1440px) {
-.container {
-    .formContainer {
-        max-width: 1300px;
+    .container {
+        .formContainer {
+            max-width: 1300px;
 
-        .heading {
-            font-size: 50px;
-        }
-
-        .formGroup,
-        .messageGroup {
-
-            label {
-                font-size: 40px;
+            .heading {
+                font-size: 50px;
             }
 
-            input {
-                height: 50px;
-                font-size:  35px;
-            }
-        }
+            .formGroup,
+            .messageGroup {
 
-        .innerCheckbox {
-            label {
+                label {
+                    font-size: 40px;
+                }
+
+                input {
+                    height: 50px;
+                    font-size: 35px;
+                }
+            }
+
+            .innerCheckbox {
+                label {
+                    font-size: 35px;
+                }
+
+                input {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 20px;
+                }
+            }
+
+            .error {
                 font-size: 35px;
             }
-    
-            input {
-                width: 35px;
-                height: 35px;
-                margin-right: 20px;
+
+            .success {
+                font-size: 35px;
+            }
+
+
+
+            .innerSubmit {
+                font-size: 40px;
+                padding: 25px 120px;
+                margin-top: 35px;
             }
         }
-
-        .innerSubmit {
-            font-size: 40px;
-            padding: 25px 120px;
-            margin-top: 35px;
-        }
     }
-}
 
     .basicInfo {
         display: flex;
@@ -275,4 +310,61 @@
 
 
 
+}
+
+.loading {
+    .spinner {
+        width: 80px;
+        height: 80px;
+        animation: rotate 2s infinite linear;
+
+        .circle1,
+        .circle2 {
+            fill: none;
+            stroke: #CBA3FF;
+            stroke-width: 2;
+            stroke-dasharray: 126;
+            stroke-dashoffset: 126;
+            transform-origin: center;
+        }
+
+        .circle1 {
+            animation: dash1 1.5s infinite linear;
+        }
+
+        .circle2 {
+            animation: dash2 1.5s infinite linear;
+        }
+    }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash1 {
+    0% {
+        stroke-dashoffset: 126;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash2 {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 126;
+    }
 }

@@ -40,6 +40,14 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+html {
+  background: #150416;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
 body {
   /* background-image: url("/background.webp");
   background-repeat: no-repeat;
@@ -49,6 +57,11 @@ body {
   background: #150416;
   max-width: 3000px;
   margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  
 }
 
 @media (prefers-color-scheme: dark) {

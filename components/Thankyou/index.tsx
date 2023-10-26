@@ -1,9 +1,12 @@
 "use client";
 import styles from "./styles.module.scss";
-import Lottie from "react-lottie-player";
-import WaveAnimationData from "../../public/wave6.json";
+import ContactForm from "../ContactForm";
+import { useState } from "react";
+import ReactDOM from 'react-dom';
 
 export default function Thankyou() {
+  const [contact, setContact] = useState(false);
+
   return (
     <div id="contactSection" className={styles.thankyou}>
       <h2>Thank you for visiting!</h2>
@@ -22,7 +25,12 @@ export default function Thankyou() {
         <a href="https://www.linkedin.com/in/girts-karcevskis-79302890/" target="_blank">
         LinkedIn profile
         </a>
+        <br /> <br />
+        Or simply leave your details and I will contact you with more information tailored to your situation
       </p>
+
+      <button onClick={() => setContact(true)}>Contact me</button>
+      {contact && ReactDOM.createPortal(<ContactForm closeContact={() => setContact(false)} />, document.body)}
     </div>
   );
 }

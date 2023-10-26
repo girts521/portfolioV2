@@ -1,6 +1,8 @@
 "use client";
 import styles from "./index.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from 'axios'
+
 
 interface ContactFormProps {
     closeContact: () => void;
@@ -12,11 +14,66 @@ interface ContactFormProps {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [terms, setTerms] = useState(false);
+    const [error, setError] = useState<string>('')
+    const [success, setSuccess] = useState<string>('')
+    const [loading, setLoading] = useState<boolean>(false)
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    useEffect(() => {
+      if (error) {
+        setSuccess('')
+        setLoading(false)
+      }
+      if (success) {
+        setError('')
+      }
+      if (loading) {
+        setError('')
+        setSuccess('')
+      }
+    }, [error, success, loading])
+
+    const validateEmail = (email: string) => {
+      const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+      return re.test(email)
+    }
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        console.log(userName, surname, email, message, terms);
+        if (!validateEmail(email)) {
+          setError('Please enter a valid email address')
+          return
+        }
+
+        if (!terms) {
+          setError('Please agree to the terms and conditions')
+          return
+        }
+
+        try {
+          setLoading(true)
+          const response = await axios.post('/api/saveUser', {
+            email: email,
+            userName: userName,
+            surname: surname,
+            message: message,
+            terms: terms,
+          })
+  
+          if (response && response.data.id ) {
+            setError('')
+            setSuccess('Thank you for your message. We will be in touch shortly')
+          }
+
+        } catch (errorResponse: any) {
+          if (errorResponse.response.data === 'User already exists') {
+            setError('You have already submitted a form. Please wait for us to get back to you')
+          }else {
+            setError('There was an error submitting your form. Please try again')
+          }
+        } finally {
+          setLoading(false)
+        }
     }
 
     const handleCheckboxChange = (event: any) => {
@@ -35,14 +92,14 @@ interface ContactFormProps {
         <form onSubmit={handleSubmit} action="">
           <div className={styles.basicInfo}>
             <div className={styles.formGroup}>
-              <label htmlFor="userName">Name*</label>
+              <label htmlFor="userName">Name</label>
               <input onChange={(e) => {
                   setName(e.target.value)
               }} type="userName" name="userName" id="userName" placeholder="Name" />
             </div>
 
             <div className={styles.formGroup}>
-              <label htmlFor="surname">Surname*</label>
+              <label htmlFor="surname">Surname</label>
               <input
                 onChange={(e) => {
                   setSurname(e.target.value);
@@ -79,6 +136,18 @@ interface ContactFormProps {
             <label   htmlFor="terms">I agree to the terms and conditions</label>
           </div>
 
+          {error && <div className={styles.error}>{error}</div>}
+          {success && <div className={styles.success}>{success}</div>}
+          {loading && (
+              <div className={styles.loading}>
+                <div className={styles.spinner}>
+                  <svg viewBox="0 0 50 50">
+                    <circle className={styles.circle1} cx="25" cy="25" r="20" />
+                    <circle className={styles.circle2} cx="25" cy="25" r="15" />
+                  </svg>
+                </div>
+              </div>
+            )}
           <button className={styles.innerSubmit} type="submit">Submit</button>
         </form>
       </div>
