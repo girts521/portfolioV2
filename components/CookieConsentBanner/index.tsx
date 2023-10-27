@@ -18,11 +18,13 @@ const CookieConsentBanner = () => {
   const handleAccept = () => {
     setShowBanner(false);
     cookie.set("cookieConsent", "accepted", { expires: 365 });
+    document.dispatchEvent(new Event('cookieConsentGiven'));
   };
 
   const handleReject = () => {
     setShowBanner(false);
     cookie.set("cookieConsent", "rejected", { expires: 365 });
+    document.dispatchEvent(new Event('cookieConsentGiven'));
   };
 
   if (!showBanner) {
