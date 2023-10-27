@@ -40,7 +40,7 @@ export default function Home() {
         <ScrollFadeInUp>
         <About />
         </ScrollFadeInUp>
-      <Portfolio />
+      {/* <Portfolio /> */}
         <ScrollFadeInUp>
       <Thankyou />
         </ScrollFadeInUp>

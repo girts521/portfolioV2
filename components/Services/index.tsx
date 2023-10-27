@@ -19,7 +19,7 @@ const closeContact = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Services</h1>
+      <h1 id="servicesSection">Services</h1>
       <div className={styles.servicesContainer}>
         <Service
           title="Custom full web application"

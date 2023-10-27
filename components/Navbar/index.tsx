@@ -65,20 +65,26 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={styles.navItem}>
+            <Link onClick={onClickHandler} href={{ pathname: "/", query: { section: "servicesSection" } }}>
+                Services
+              </Link>
+            </li>
+            <li className={styles.navItem}>
             <Link onClick={onClickHandler} href={{ pathname: "/", query: { section: "aboutSection" } }}>
                About
               </Link>
             </li>
-            <li className={styles.navItem}>
+            {/* <li className={styles.navItem}>
             <Link onClick={onClickHandler} href={{ pathname: "/", query: { section: "portfolioSection" } }}>
                 Portfolio
               </Link>
-            </li>
+            </li> */}
             <li className={styles.navItem}>
             <Link onClick={onClickHandler} href={{ pathname: "/", query: { section: "contactSection" } }}>
                 Contact
               </Link>
             </li>
+
           </ul>
         </nav>
       )}

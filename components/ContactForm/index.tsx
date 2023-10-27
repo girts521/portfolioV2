@@ -2,7 +2,7 @@
 import styles from "./index.module.scss";
 import { useState, useEffect } from "react";
 import axios from 'axios'
-
+import Link from "next/link";
 
 interface ContactFormProps {
     closeContact: () => void;
@@ -133,7 +133,9 @@ interface ContactFormProps {
 
           <div className={styles.innerCheckbox}>
             <input onChange={handleCheckboxChange} type="checkbox" name="terms" id="terms" />
-            <label   htmlFor="terms">I agree to the terms and conditions</label>
+            <label   htmlFor="terms">I agree to the <Link href={'/terms'}>
+            terms and conditions
+            </Link> </label>
           </div>
 
           {error && <div className={styles.error}>{error}</div>}

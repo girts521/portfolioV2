@@ -1,6 +1,7 @@
 // pages/_app.js
 import '../src/app/globals.css';  // Import global styles
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 function MyApp({ Component, pageProps }) {
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
         <Navbar />
 
       <Component {...pageProps} />  {/* The current page component */}
+      <Footer />
     </div>
   );
 }
