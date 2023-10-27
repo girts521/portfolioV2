@@ -133,7 +133,7 @@ interface ContactFormProps {
 
           <div className={styles.innerCheckbox}>
             <input onChange={handleCheckboxChange} type="checkbox" name="terms" id="terms" />
-            <label   htmlFor="terms">I agree to the <Link href={'/terms'}>
+            <label   htmlFor="terms">I agree to the <Link className={styles.terms} href={'/terms'}>
             terms and conditions
             </Link> </label>
           </div>

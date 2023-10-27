@@ -110,7 +110,13 @@
                 line-height: normal;
                 letter-spacing: 0.5px;
                 cursor: pointer;
+
+                a {
+                    text-decoration: underline;
+                }
             }
+
+
 
             input {
                 width: 20px;
