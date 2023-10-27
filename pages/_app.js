@@ -34,7 +34,7 @@ useEffect(() => {
   return (
     <div>
       <Head>
-        
+      <meta name="facebook-domain-verification" content="be54x6r04zocmph5alzp8qee4xoe04" />
       {cookieConsent && (
           <>
             <script
